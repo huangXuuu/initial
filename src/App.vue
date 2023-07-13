@@ -11,7 +11,9 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="HelloWorld" />
+  <HelloWorldCopy msg="HelloWorldCopy" />
+  <!-- <el-button>test1111</el-button> -->
 </template>
 
 <style scoped>
