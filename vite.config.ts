@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import Inspect from 'vite-plugin-inspect';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
@@ -7,6 +8,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
+    Inspect(),
     // 全局注册component
     Components({
       /**
@@ -14,7 +16,8 @@ export default defineConfig({
        * typeScript安装状态下默认为true，否则false
        * 如果指定为true则默认生成至【./components.d.ts】
        */
-      dts: './src/components.d.ts',
+      // dts: './src/components.d.ts',
+      dts: false,
       /**
        * 默认只会自动注册【src/components】目录下的组件
        * 可以指定目标目录
