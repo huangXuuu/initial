@@ -4,11 +4,14 @@ import Inspect from 'vite-plugin-inspect';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
+import myPlugin from './plugins/myPlugin';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     Inspect(),
+    myPlugin(),
     // 全局注册component
     Components({
       /**
@@ -29,7 +32,7 @@ export default defineConfig({
       // extensions: ['vue'],
       /**
        * Glob方式目标文件过滤
-       * 此选项拥有最高优先级，会覆盖【extensions】及【dirs】配置
+       * 此选项拥有最高优先级，会忽略【extensions】及【dirs】配置
        */
       // globs: ['src/components/*.{vue}'],
       /**
