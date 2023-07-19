@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorldCopy from './components/HelloWorldCopy.vue'
 </script>
 
 <template>
